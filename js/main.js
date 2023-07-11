@@ -40,6 +40,10 @@ function onBtnClick() {
   const div = document.querySelector("div.bg-gridcolor");
   for (let i = 0; i < grid.length; i++) {
     div.append(grid[i]);
+    grid[i].addEventListener("click", function () {
+      grid[i].style.backgroundColor = "#7fffd4";
+      console.log(`Hai premuto la cella ${i}`);
+    });
   }
 }
 
